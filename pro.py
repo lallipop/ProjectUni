@@ -3,7 +3,6 @@ from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
-from kivy.uix.popup import Popup
 from kivy.uix.textinput import TextInput
 
 
@@ -24,9 +23,6 @@ class MainApp(App):
         self.button.bind(on_press=self.btn_press)
         self.button_dec = Button(text="Дешифровать")
         self.button_dec.bind(on_press=self.btn_dec_press)
-        self.popup = Popup(title='Test popup',
-                           content=Label(text='Hello world'),
-                           size_hint=(None, None), size=(400, 400))
 
     def btn_press(self, *args):
         alphabet_RU = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
